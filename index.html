@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Visualización sismos en 3d Chile 2000 - 2019 </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+        <!-- Inicio cargador de archivos -->
+        <script src="./js-externo/three.js"></script>
+        <script src="./js-externo/d3-collection.v1.min.js"></script>
+        <script src="./js-externo/d3-dispatch.v1.min.js"></script>
+        <script src="./js-externo/d3-dsv.v1.min.js"></script>
+        <script src="./js-externo/d3-request.v1.min.js"></script>
+        <script src="./js-externo/d3-queue.v3.min.js"></script>
+        <script src="./js-externo/THREE.MeshLine.js"></script>
+        <script src="./js-externo/OrbitControls.js"></script>
+        <script src="./js/controles-bloqueo-puntero.js"></script>
+        
+        <!-- Final cargador de archivos -->
+
+        <style>
+            html, body {
+                width: 100%;
+                height: 100%;
+            }
+
+            body {
+                background-color: #ffffff;
+                margin: 0;
+                overflow: hidden;
+                font-family: arial;
+            }
+
+            #blocker {
+
+                position: absolute;
+
+                width: 100%;
+                height: 100%;
+
+                background-color: rgba(0,0,0,0.5);
+
+            }
+
+            #instructions {
+
+                width: 100%;
+                height: 100%;
+
+                display: -webkit-box;
+                display: -moz-box;
+                display: box;
+
+                -webkit-box-orient: horizontal;
+                -moz-box-orient: horizontal;
+                box-orient: horizontal;
+
+                -webkit-box-pack: center;
+                -moz-box-pack: center;
+                box-pack: center;
+
+                -webkit-box-align: center;
+                -moz-box-align: center;
+                box-align: center;
+
+                color: #ffffff;
+                text-align: center;
+
+                cursor: pointer;
+
+            }
+        </style>
+    </head>
+
+
+    <body>
+        <div id="blocker">
+            <div id="instructions">
+                <span style="font-size:40px">Haz Clic para visualizar</span>
+                <br />
+                (W, A, S, D = Flecha arriba, Fecha abajo, Mouse = Recorrer
+            </div>
+        </div>
+
+        <script src="./js/visualizador-de-puntos.js"></script>
+    </body>
+
+</html>
+
